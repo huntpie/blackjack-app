@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace blackjack_app
 {
@@ -6,7 +7,8 @@ namespace blackjack_app
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Welcome to C#");
+      //
+
     }
   }
 }
