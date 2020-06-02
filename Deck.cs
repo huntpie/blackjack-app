@@ -26,11 +26,9 @@ namespace blackjack_app
       {
         foreach (var face in faces)
         {
-          var newCard = new Card()
-          {
-            Suit = suit,
-            Face = face,
-          }
+          var newCard = new Card();
+          newCard.Suit = suit;
+          newCard.Face = face;
           Cards.Add(newCard);
         }
       }
@@ -42,13 +40,18 @@ namespace blackjack_app
       {
         var secondIndex = randomNumber.Next(index);
 
-        var firstCard = Cards[secondIndex];
+        var firstCard = Cards[index];
         var nextCard = Cards[secondIndex];
 
         Cards[index] = nextCard;
         Cards[secondIndex] = firstCard;
       }
-
+    }
+    public Card Deal()
+    {
+      var card = Cards[0];
+      Cards.Remove(card);
+      return card;
     }
   }
 }
